@@ -16,8 +16,8 @@ function getInfo(url) {
     dumpSingleJson: true,
     noCheckCertificates: true,
     noWarnings: true,
-    preferFreeFormats: true
-    // addHeader: ["referer:youtube.com", "user-agent:googlebot"]
+    preferFreeFormats: true,
+    addHeader: ["referer:youtube.com", "user-agent:googlebot"]
   });
 }
 app.use(
