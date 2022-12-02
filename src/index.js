@@ -94,6 +94,7 @@ app.get("/view", async (req, res) => {
     addHeader: ["referer:youtube.com", "user-agent:googlebot"]
   })
     .then((data) => {
+
       var formats = data.formats.filter(
         (format) =>
           format.vcodec !== "none" &&
@@ -104,7 +105,7 @@ app.get("/view", async (req, res) => {
       var video =
         quality === "lowest" ? formats[0] : formats[formats.length - 1];
       var b = false;
-      if (b && video.url.startsWith("https://rr4")) {
+      if (b) {
         var abccc = validate(data.title)
           .split("+")
           .join(" ")
