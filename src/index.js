@@ -8,6 +8,8 @@ const tester = {};
 const cors = require("cors");
 const youtubedl = require("youtube-dl-exec");
 const ytdl = require("ytdl-core");
+const PORT = process.env.PORT || 3000
+
 function getInfo(url) {
   console.log(url);
   return youtubedl(url, {
@@ -137,9 +139,5 @@ app.get("/view", async (req, res) => {
       tester[a] = page;
       res.redirect(404, page);
     });
-});
-
-server.listen(3000, () => {
-  console.log("listening on *:" + 3000);
-});
-console.log("bum bum bum bum");
+})
+  .listen(PORT, () => console.log(`Listening on ${PORT}`))

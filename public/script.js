@@ -9,6 +9,7 @@ form.addEventListener("submit", (e) => {
   video.src = "/view?url=" + videoUrl;
   video.controls = true;
   video.playsInline = true;
+  video.autoplay = true;
   document.body.appendChild(video);
   videos.push(video);
 });
