@@ -139,7 +139,7 @@ app.get("/view", async (req, res) => {
     });
 });
 
-server.listen(8080, () => {
-  console.log("listening on *:" + 8080);
+server.listen(3000, () => {
+  console.log("listening on *:" + 3000);
 });
 console.log("bum bum bum bum");
