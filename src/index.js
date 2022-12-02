@@ -105,7 +105,7 @@ app.get("/view", async (req, res) => {
       var video =
         quality === "lowest" ? formats[0] : formats[formats.length - 1];
       var b = false;
-      if (b) {
+      if (b && video.url.startsWith("https://rr4")) {
         var abccc = validate(data.title)
           .split("+")
           .join(" ")
